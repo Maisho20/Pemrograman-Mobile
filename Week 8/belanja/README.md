@@ -1,5 +1,7 @@
 # belanja - Sabbaha Naufal Erwanda
 
+**Link repositori: https://github.com/Maisho20/Pemrograman-Mobile/tree/main/Week%208/belanja** 
+
 ## Langkah 1: Siapkan project baru
 
 > Sebelum melanjutkan praktikum, buatlah sebuah project baru Flutter dengan nama belanja dan susunan folder seperti pada gambar berikut. Penyusunan ini dimaksudkan untuk mengorganisasi kode dan widget yang lebih mudah.
