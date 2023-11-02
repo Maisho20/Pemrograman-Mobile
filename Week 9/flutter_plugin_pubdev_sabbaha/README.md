@@ -8,25 +8,26 @@
 
 **Tugas: Membuat plugin pub.dev untuk menampilkan data dari API**
 
-**[Link Repositories]()**
+**[Link Repositories](https://github.com/Maisho20/Pemrograman-Mobile/tree/main/Week%209/flutter_plugin_pubdev_sabbaha)**
 
 # Persiapan praktikum
 
 **Menambahkan plugin `auto_size_text`**
 dengan menjalankan `Command` berikut, untuk menambahkan plugin kedalam project flutter
-![persiapan](images\persiapan_1.png)
+<img src="images\persiapan_1.png" width=50% height=50%>
 
 Hasil running `Command`
 
-![hasil_persiapan](images\hasil_persiapan.png)
+<img src="images\hasil_persiapan.png" width=50% height=50%>
 
 Maka, di `pubspec.yaml` akan otomatis menambahkan pugin yang di jalankan di `Command`
 
-![hasil_persiapan](images\hasil_persiapan_1.png)
+<img src="images\hasil_persiapan_1.png" width=50% height=50%>
 
 **Menambahkan plugin device_info_plus**
 
-![hasil_persiapan](image.png)
+<img src="image.png" width=50% height=50%>
+
 
 **Menambahkan `dependency_overrides` pada `pubspec.yaml`**
 
