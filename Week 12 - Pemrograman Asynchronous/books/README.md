@@ -138,7 +138,21 @@ Future<int> returnThreeAsync() async {
 Lalu tambahkan lagi method ini di bawah ketiga method sebelumnya.
 
 ```dart
-
+ElevatedButton(
+  child: const Text('GO!'),
+  onPressed: () {
+    count();
+    //Praktikum 1
+    // setState(() {});
+    // getData().then((value) {
+    //   result = value.body.toString().substring(0, 450);
+    //   setState(() {});
+    // }).catchError((_) {
+    //   result = 'An error occurred!';
+    //   setState(() {});
+    // });
+  },
+),
 ```
 
 **3. Panggil count()<br>**
