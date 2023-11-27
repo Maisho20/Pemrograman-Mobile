@@ -260,7 +260,7 @@ Tambahkan kode berikut pada fungsi `onPressed()`. Kode sebelumnya bisa Anda comm
 Terakhir, **run** atau tekan **F5** untuk melihat hasilnya jika memang belum running. Bisa juga lakukan **hot restart** jika aplikasi sudah running. Maka hasilnya akan seperti gambar berikut ini. Setelah 5 detik, maka angka 42 akan tampil.<br>
 <img src="flutter_03.png" width=50%>
 
-**Soal 4**
+**Soal 5**
 
 - Jelaskan maksud kode langkah 2 tersebut!<br>
   Jawab:<br>
