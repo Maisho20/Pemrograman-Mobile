@@ -269,3 +269,70 @@ Terakhir, **run** atau tekan **F5** untuk melihat hasilnya jika memang belum run
 
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 5".<br>
   <img src="soal 5.gif" width=50%>
+
+**5. Ganti method calculate()<br>**
+Gantilah isi code method `calculate()` seperti kode berikut, atau Anda dapat membuat `calculate2()`
+
+```dart
+  Future calculate() async {
+    // await Future.delayed(const Duration(seconds: 5));
+    // completer.complete(42);
+    try {
+      await Future.delayed(const Duration(seconds: 5));
+      completer.complete(42);
+    } catch (_) {
+      completer.completeError({});
+    }
+  }
+```
+
+**6. Pindah ke onPressed()<br>**
+Ganti menjadi kode seperti berikut.
+
+```dart
+getNumber().then((value) {
+  setState(() {
+    result = value.toString();
+  });
+}).catchError((e) {
+  result = 'An error occurred';
+});
+```
+
+**Soal 6**
+
+- Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!<br>
+  **Jawab<br>**
+
+  - **Code 1**
+
+  ```dart
+    Future calculate() async {
+      try {
+        await Future.delayed(const Duration(seconds: 5));
+        completer.complete(42);
+      } catch (_) {
+        completer.completeError({});
+      }
+    }
+  ```
+
+  - Fungsi `calculate` diatas akan mengembalikan sebuah objek `Future` yang berisi nilai `42` setelah selesai menunggu waktu yang ditentukan. Jika terjadi kesalahan saat eksekusi, maka objek `Future` tersebut akan mengalami kesalahan dan mengirimkan objek error kosong.
+  - kode diatas akan mengeksekusi fungsi `getNumber()`, mengatur ulang komponen widget apabila promise terpenuhi, dan mengatur ulang komponen widget menjadi teks kesalahan apabila promise tergagal.
+    <br><br>
+  - **Code 2**
+
+  ```dart
+  getNumber().then((value) {
+    setState(() {
+      result = value.toString();
+    });
+    }).catchError((e) {
+    result = 'An error occurred';
+  });
+  ```
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 6".
+  <img src="soal 6.gif" width=50%>
+
+# Praktikum 4: Memanggil Future secara paralel
