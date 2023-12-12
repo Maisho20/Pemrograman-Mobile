@@ -105,7 +105,9 @@ Tambahkan kode pada `onPressed` di `ElevatedButton` seperti berikut.
 > - Jelaskan maksud kode langkah 5 tersebut terkait `substring` dan `catchError!`<br> **Jawab:<br>**
 >   - `.catchError((_) {...})`: pada code diatas akan dieksekusi jika terjadi kesalahan saat proses pengambilan data. Pada contoh ini, kita mengatur teks yang akan ditampilkan menjadi 'An error occurred!' apabila terjadi kesalahan.
 >   - `substring()`: pada code diatas digunakan untuk membatasi panjang karakter yang ditampilkan pada layar. Pada contoh ini, substring mengambil karakter pertama sampai karakter ke-450 dari data yang telah diterima. Hal ini dilakukan agar teks yang ditampilkan pada layar tidak terlalu panjang dan mudah dibaca oleh pengguna.
-> - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 3".<br> > <img src="flutter_01.png" width=50%>
+> - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 3".
+> - >
+> - > <img src="flutter_01.png" width=50%>
 
 ---
 
