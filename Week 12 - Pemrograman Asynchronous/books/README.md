@@ -106,8 +106,8 @@ Tambahkan kode pada `onPressed` di `ElevatedButton` seperti berikut.
 >   - `.catchError((_) {...})`: pada code diatas akan dieksekusi jika terjadi kesalahan saat proses pengambilan data. Pada contoh ini, kita mengatur teks yang akan ditampilkan menjadi 'An error occurred!' apabila terjadi kesalahan.
 >   - `substring()`: pada code diatas digunakan untuk membatasi panjang karakter yang ditampilkan pada layar. Pada contoh ini, substring mengambil karakter pertama sampai karakter ke-450 dari data yang telah diterima. Hal ini dilakukan agar teks yang ditampilkan pada layar tidak terlalu panjang dan mudah dibaca oleh pengguna.
 > - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 3".
-> - >
-> - > <img src="flutter_01.png" width=50%>
+>
+> <img src="flutter_01.png" width=50%>
 
 ---
 
@@ -209,7 +209,9 @@ Akhirnya, **run** atau tekan **F5** jika aplikasi belum running. Maka Anda akan 
 > Fungsi `count()` menggunakan Future dan async-await untuk menjalankan proses secara asynchronous. Fungsi ini dimulai dengan menginisialisasi variabel total ke 0.<br><br>
 > Setelah itu, fungsi memanggil returnOneAsync(), returnTwoAsync(), dan returnThreeAsync() secara asynchronous menggunakan await. Hal ini berarti bahwa proses di bawah ini tidak akan memblokir proses utama, yang mengartikan bahwa aplikasi dapat melanjutkan eksekusi proses lainnya sementara proses ini berjalan.
 >
-> - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 4".<br> > <img src="soal 4.gif" width=50%>
+> - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 4".
+> 
+> <img src="soal 4.gif" width=50%>
 
 ---
 
