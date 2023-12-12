@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
-// import 'package:async/async.dart';
+import 'package:async/async.dart';
 
 void main() {
   runApp(const MyApp());
@@ -81,6 +81,40 @@ class _FuturePageState extends State<FuturePage> {
     });
   }
 
+  void returnFG() {
+    FutureGroup<int> futureGroup = FutureGroup<int>();
+    futureGroup.add(returnOneAsync());
+    futureGroup.add(returnTwoAsync());
+    futureGroup.add(returnThreeAsync());
+    futureGroup.close();
+    futureGroup.future.then((List<int> value) {
+      int total = 0;
+      for (var element in value) {
+        total += element;
+      }
+      setState(() {
+        result = total.toString();
+      });
+    });
+  }
+
+  Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw ('Something went wrong!');
+  }
+
+  Future handleError() async {
+    try {
+      await returnError();
+    } catch (error) {
+      setState(() {
+        result = error.toString();
+      });
+    } finally {
+      print('Completed');
+    }
+  }
+
   String result = '';
   @override
   Widget build(BuildContext context) {
@@ -94,18 +128,35 @@ class _FuturePageState extends State<FuturePage> {
           ElevatedButton(
             child: const Text('GO!'),
             onPressed: () {
+              //Praktikum 5
+              handleError();
+              // returnError().then((value) {
+              //   setState(() {
+              //     result = 'Success';
+              //   });
+              // }).catchError((onError) {
+              //   setState(() {
+              //     result = onError.toString();
+              //   });
+              // }).whenComplete(() => print('Completed'));
+
+              //Praktikum 4 - Soal 7
+              // returnFG();
+
               // Praktikum 3
               // getNumber().then((value) {
               //   result = value.toString();
               //   setState(() {});
               // });
-              getNumber().then((value) {
-                setState(() {
-                  result = value.toString();
-                });
-              }).catchError((e) {
-                result = 'An error occurred';
-              });
+
+              //Praktikum 3
+              // getNumber().then((value) {
+              //   setState(() {
+              //     result = value.toString();
+              //   });
+              // }).catchError((e) {
+              //   result = 'An error occurred';
+              // });
 
               //Praktikum 2
               // count();
@@ -124,7 +175,7 @@ class _FuturePageState extends State<FuturePage> {
           const Spacer(),
           Text(result),
           const Spacer(),
-          const CircularProgressIndicator(),
+          // const CircularProgressIndicator(),
           const Spacer(),
         ]),
       ),
